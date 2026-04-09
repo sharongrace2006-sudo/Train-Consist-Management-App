@@ -19,6 +19,8 @@ class Bogie {
         return name + " (Capacity: " + capacity + ")";
     }
 }
+import java.util.HashMap;
+import java.util.Map;
 
 public class TrainConsistManagementApp {
 
@@ -48,5 +50,22 @@ public class TrainConsistManagementApp {
         for (Bogie b : bogies) {
             System.out.println(b);
         }
+        // Create HashMap for bogie-capacity mapping
+        Map<String, Integer> bogieCapacityMap = new HashMap<>();
+
+        // Insert bogie capacities using put()
+        bogieCapacityMap.put("Sleeper", 72);
+        bogieCapacityMap.put("AC Chair", 60);
+        bogieCapacityMap.put("First Class", 24);
+
+        // Display bogie capacity details
+        System.out.println("Bogie Capacity Details:");
+
+        for (Map.Entry<String, Integer> entry : bogieCapacityMap.entrySet()) {
+            System.out.println("Bogie: " + entry.getKey() +
+                    " | Capacity: " + entry.getValue());
+        }
+
+        // Program continues...
     }
 }
